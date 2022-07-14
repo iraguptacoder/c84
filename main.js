@@ -20,7 +20,7 @@ function uploadimg() {
 	ctx.drawImage(img_imgTag, img_x, img_y, img_width, img_height);
 }
 
-window.addEventListener("keydown, my_keydown")
+window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e)
 {
@@ -34,6 +34,10 @@ function my_keydown(e)
 			console.log("alphabet key");
 		}
 
+		else if(keyPressed>=37 && keyPressed<=40){
+			arrowkey();
+			document.getElementById("d1").innerHTML="You pressed Arrow Key";
+		}
 	else{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
@@ -47,14 +51,18 @@ function aplhabetkey()
 }
 function numberkey()
 {
-	
+	img_image="numkey.png";
+	add();
 }
 function arrowkey()
 {
+	img_image="Arrkey.png";
+	add();
 }
-function specialkey()
+function spacialkey()
 {
-	
+	img_image="spkey.png";
+	add();
 }
 function otherkey()
 {
@@ -62,3 +70,7 @@ function otherkey()
 	add();
 }
 	
+
+
+
+
